@@ -1,0 +1,30 @@
+{
+  "connection": "default",
+  "collectionName": "brands",
+  "info": {
+    "name": "brands",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "brews": {
+      "collection": "brews",
+      "via": "brand"
+    }
+  }
+}
